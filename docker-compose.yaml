@@ -3,7 +3,7 @@ version: '3'
 services:
   # Frontend Service
   vue: # name of service
-    build: frontend # dir of dockerfile
+    build: mysite # dir of dockerfile
     restart: unless-stopped
     tty: true
     ports:
