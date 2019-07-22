@@ -2,19 +2,19 @@ version: '3'
 
 services:
   # Frontend Service
-  vue: # name of service
+  mysite: # name of service
     build: mysite # dir of dockerfile
     restart: unless-stopped
     tty: true
     ports:
-    - "8082:80" # map ports
+    - "8084:80" # map ports
     networks:
     - app-network
 
   # Nginx Service
-  webserver:
+  mysite-webserver:
     image: nginx:alpine
-    container_name: webserver
+    container_name: mysite-webserver
     restart: unless-stopped
     tty: true
     ports:
