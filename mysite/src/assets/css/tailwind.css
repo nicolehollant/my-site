@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+    --bg-primary: #352538;
+    --text-primary: #fdcff2;
+    --font-primary:'Quicksand', sans-serif;
+}
+
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+.text-primary {
+    color: var(--text-primary);
+}
+.font-primary {
+    font-family: var(--font-primary);
+}
+
+.base-primary {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+}

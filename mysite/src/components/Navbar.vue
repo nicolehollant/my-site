@@ -64,7 +64,9 @@ methods: {
 }
 .header {
     border-bottom: 1px solid var(--divider-color);
-    @apply flex flex-row items-center justify-between m-auto pt-6 pb-4 max-w-6xl;
+    width: 72rem;
+    max-width: 90%;
+    @apply flex flex-row items-center justify-between m-auto pt-6 pb-4;
 }
 .header-text {
     color: rgb(237, 174, 255);
@@ -79,6 +81,7 @@ methods: {
 .nav-drawer {
     z-index: 10;
     width: 20%;
+    min-width: max-content;
     left: 0;
     background-color: #2c1e2cdd;
     box-shadow: 4px 4px 10px -1px  #00000034;
