@@ -3,7 +3,7 @@ export default function( sketch ) {
     var width = 0;
     var height = 0;
     var particleArr = [];
-    var numParticles = 80;
+    var numParticles;
     var wind = 0;
     var yoff = 0.0;
 
@@ -15,6 +15,9 @@ export default function( sketch ) {
         sketch.noStroke();
         sketch.fill(176, 191, 212);
         sketch.strokeWeight(2);
+        if(width < 500) numParticles = 30;
+        else numParticles = 80;
+
         for(var i = 0; i < numParticles; i++){
             particleArr.push(new Particle());
         }
@@ -25,6 +28,7 @@ export default function( sketch ) {
         wind = sketch.map(sketch.mouseX, 0, width, -1, 1);
         sketch.clear();
         for (var i = 0; i < numParticles; ++i) {
+            if(particleArr.length < numParticles) particleArr.push(new Particle());
             particleArr[i].move();
             particleArr[i].display();
         }
@@ -46,6 +50,11 @@ export default function( sketch ) {
 
         width = document.getElementById('sketch').clientWidth;
         height = document.getElementById('sketch').clientHeight;
+        if(width < 500) numParticles = 30;
+        else numParticles = 80;
+
+        if(particleArr.length > numParticles) particleArr=particleArr.slice(0, numParticles);
+
         sketch.resizeCanvas(width, height);
     }
 
@@ -81,7 +90,7 @@ export default function( sketch ) {
         }
       
         display() {
-            sketch.circle(this.x, this.y, this.diam2+3);
+            sketch.circle(this.x, this.y, this.diameter*0.75);
         }
     
         reset(){

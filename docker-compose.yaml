@@ -19,7 +19,7 @@ services:
     tty: true
     ports:
     - "82:80" # for me locally
-    - "444:443"
+    - "446:443"
     networks:
     - app-network
 

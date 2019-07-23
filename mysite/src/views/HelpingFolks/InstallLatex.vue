@@ -60,7 +60,7 @@ components: {
     @apply fixed top-0 left-0 w-full h-screen;
 }
 .content {
-    @apply mt-6 mx-auto max-w-5xl text-xl text-left;
+    @apply mt-6 mb-12 mx-auto max-w-5xl text-xl text-left px-4;
 }
 a {
     @apply text-pink-500;

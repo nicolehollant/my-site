@@ -10,7 +10,7 @@
         <p>I love proofs, programming, and playing tunes.</p>
         <p>These days I'm rather busy, but I try to find time for a fun ideas!</p>
       </div>
-      <div class="blurb-foot text-3xl leading-tight mb-10">
+      <div class="blurb-foot">
         <p><i> Here are some things that I've been working on.</i></p>
         <p><i>Checkout my <a href="https://github.com/colehollant" target="_blank" rel="noopener noreferrer">GitHub</a> for more! </i></p>
         
@@ -85,11 +85,14 @@ export default {
 }
 .filter{
   z-index: -1;
-  background-color: #2f2a30d5;
+  background-color: #2f2a30e8;
 }
 
 .blurb {
-  @apply my-6 text-2xl;
+  @apply my-3 text-xl mx-4;
+}
+.blurb-foot {
+  @apply text-2xl leading-tight mb-5 mx-4;
 }
 a{
   color: rgb(237, 174, 255);
@@ -97,11 +100,12 @@ a{
 }
 
 .grid {
+  padding: 1rem;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(135px, auto);
-  grid-gap: 1rem;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 0.75rem;
 }
 .grid-item {
   color: #ffb9ef;
@@ -109,7 +113,7 @@ a{
   /* background-color: rgba(13, 54, 73, 0.75); */
   background-color: rgba(59, 12, 51, 0.6);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  @apply flex items-center justify-center w-full h-full cursor-pointer px-8 pt-6 pb-10 text-lg shadow-lg;
+  @apply flex items-center justify-center w-full h-full cursor-pointer px-4 pt-3 pb-5 text-lg shadow-lg;
 }
 .grid-item:hover{
   background-color: rgba(63, 24, 56, 0.6);
@@ -122,5 +126,28 @@ a{
   transform: scale(0.8);
 }
 
+@media only screen and (min-width: 800px) {
 
+.grid-item {
+  @apply px-8 pt-6 pb-10;
+}
+
+.grid {
+  grid-auto-rows: minmax(135px, auto);
+  grid-gap: 1rem;
+}
+
+.blurb {
+  @apply my-6 text-2xl mx-0;
+}
+
+.blurb-foot {
+  @apply text-3xl leading-tight mb-10 mx-0;
+}
+
+.filter{
+  background-color: #2f2a30d5;
+}
+
+}
 </style>

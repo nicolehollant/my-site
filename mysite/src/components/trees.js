@@ -2,6 +2,8 @@ export default function( sketch ) {
 
     var width = 0;
     var height = 0;
+    var lastHeight = 0;
+    var lastWidth = 0;
     var theta2 = 0.9;
     var initialThickness = 100;
     var initialXLeft, initialXRight;
@@ -9,6 +11,8 @@ export default function( sketch ) {
     sketch.setup = function() {
         width = document.getElementById('sketch2').clientWidth;
         height = document.getElementById('sketch2').clientHeight;
+        lastHeight = height;
+        lastWidth = width;
         sketch.createCanvas(width, height);
         sketch.stroke(211, 223, 227);
         makeTrees();
@@ -17,10 +21,14 @@ export default function( sketch ) {
     sketch.windowResized = function() {
         width = document.getElementById('sketch2').clientWidth;
         height = document.getElementById('sketch2').clientHeight;
-        sketch.resizeCanvas(width, height);
-        setTimeout(() => {
-            makeTrees();
-        }, 200);
+        if(Math.abs(lastHeight-height) > 100 || Math.abs(lastWidth-width) > 100){
+            lastHeight = height;
+            lastWidth = width;
+            sketch.resizeCanvas(width, height);
+            setTimeout(() => {
+                makeTrees();
+            }, 200);
+        }
     }
 
     function makeTrees() {

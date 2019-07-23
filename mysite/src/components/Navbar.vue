@@ -86,6 +86,7 @@ methods: {
     background-color: #2c1e2cdd;
     box-shadow: 4px 4px 10px -1px  #00000034;
     transition: all 4s cubic-bezier(.25,.8,.25,1) 0.03s;
+    overflow-y: scroll;
     @apply fixed top-0 bottom-0 left-0 h-full text-base;
 }
 .nav-title {
