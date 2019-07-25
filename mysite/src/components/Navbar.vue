@@ -11,16 +11,16 @@
           <div id="line"></div>
           <ul class="side-nav">
             <li><router-link to="/" exact class="nav-link" v-on:click.native="dismissMenu">Home</router-link></li>
-            <li><router-link to="/TransportApp/TransportAppLanding" exact class="nav-link" v-on:click.native="dismissMenu">Shuttle App</router-link></li>
+            <li><a class="nav-link" v-on:click.native="dismissMenu" href="https://sproj.colehollant.com">Sproj</a></li>
             <li><a class="nav-link" v-on:click.native="dismissMenu" href="https://www.colehollant.com/SciComFinal">Sci Com Final</a></li>
-            <li><a class="nav-link" v-on:click.native="dismissMenu" href="https://www.colehollant.com/OOP">OOP Labs</a></li>
+            <li><router-link to="/TransportApp/TransportAppLanding" exact class="nav-link" v-on:click.native="dismissMenu">Shuttle App</router-link></li>
+            <li><a class="nav-link" v-on:click.native="dismissMenu" href="https://oop.colehollant.com">OOP Labs</a></li>
             <li><a class="nav-link" v-on:click.native="dismissMenu" href="https://www.colehollant.com/Stefan">Stefan</a></li>
             <li><router-link to="/GamersPorners/home" exact class="nav-link" v-on:click.native="dismissMenu">WrHr Final</router-link></li>
-            <li><a class="nav-link" v-on:click.native="dismissMenu" href="https://www.colehollant.com/MasterMethod">Master Method</a></li>
-            <li><a class="nav-link" v-on:click.native="dismissMenu" href="https://www.colehollant.com/graph">Graph Calc</a></li>
+            <li><router-link to="/MasterMethod" exact class="nav-link" v-on:click.native="dismissMenu">Master Method</router-link></li>
+            <li><router-link to="/GraphingCalc" exact class="nav-link" v-on:click.native="dismissMenu">Graphing Calc</router-link></li>
             <li><a class="nav-link" v-on:click.native="dismissMenu" href="https://www.colehollant.com/TPP">Twitch/Twitter</a></li>
-            <li><a class="nav-link" v-on:click.native="dismissMenu" href="https://www.colehollant.com/ForBrianna">For Brianna</a></li>
-            <li><router-link to="/ForPhil/InstructionsForPhil" exact class="nav-link" v-on:click.native="dismissMenu">For Phil</router-link></li>
+            <li><router-link to="/help/InstallLatex" exact class="nav-link" v-on:click.native="dismissMenu">Install Latex</router-link></li>
           </ul>
         </nav>  
         </transition>

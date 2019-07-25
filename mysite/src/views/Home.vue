@@ -19,9 +19,9 @@
         <a href="http://sproj.colehollant.com"><div class="grid-item"><div class="grid-item-text">Senior Project</div></div></a>
         <a href="https://github.com/colehollant"><div class="grid-item"><div class="grid-item-text">GitHub</div></div></a>
         <router-link to="/MasterMethod"><div class="grid-item"><div class="grid-item-text">Master Method</div></div></router-link>
-        <router-link to="/SuperShapes"><div class="grid-item"><div class="grid-item-text">Super Shapes</div></div></router-link>
+        <a href="https://colehollant.com/shapes"><div class="grid-item"><div class="grid-item-text">Super Shapes</div></div></a>
         <router-link to="/GraphingCalc"><div class="grid-item"><div class="grid-item-text">Graphing Calc</div></div></router-link>
-        <router-link to="/help/InstallLatex"><div class="grid-item"><div class="grid-item-text">Install LaTeX</div></div></router-link>
+        <a href="https://oop.colehollant.com"><div class="grid-item"><div class="grid-item-text">Plea for OOP</div></div></a>
       </div>
     </main>
   </div>
