@@ -11,6 +11,7 @@
 body, html {
   margin: 0;
   padding: 0;
+  background-color: #352538;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
