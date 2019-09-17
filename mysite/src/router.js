@@ -25,6 +25,11 @@ export default new Router({
       component: () => import('./views/HelpingFolks/MasterMethod.vue')
     },
     {
+      path: '/Emma',
+      name: 'emma',
+      component: () => import('./views/HelpingFolks/Emma.vue')
+    },
+    {
       path: '*',
       name: '404',
       component: () => import('./views/404.vue')
